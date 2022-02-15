@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #52489c;
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  background-color: #ebebeb;
+  border-radius: 100%;
+}
+
+#ball {
+  /* this is required for top and bottom positions to work */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
