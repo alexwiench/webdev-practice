@@ -1,29 +1,31 @@
 let ball = document.getElementById("ball");
 
-//set initial position
+//set initial position by grabbing current location in window
 let x = ball.getBoundingClientRect().left;
 let y = ball.getBoundingClientRect().top;
-
-// ball.style.top = y;
-// ball.style.left = x;
+let moveSpeed = 20;
 
 let up = () => {
-  ball.style.top = `${y--}px`;
+  y = y - moveSpeed;
+  ball.style.top = `${y}px`;
   console.log(`up ${y}`);
 };
 
 let down = () => {
-  ball.style.top = `${y++}px`;
+  y = y + moveSpeed;
+  ball.style.top = `${y}px`;
   console.log(`down ${y}`);
 };
 
 let right = () => {
-  ball.style.left = `${x++}px`;
+  x = x + moveSpeed;
+  ball.style.left = `${x}px`;
   console.log(`right ${x}`);
 };
 
 let left = () => {
-  ball.style.left = `${x--}px`;
+  x = x - moveSpeed;
+  ball.style.left = `${x}px`;
   console.log(`left ${x}`);
 };
 
@@ -46,3 +48,21 @@ let moveBall = (e) => {
 };
 
 document.addEventListener("keydown", moveBall);
+
+// acceleration testing
+
+const currentKeysPressed = {};
+
+let onKeypress = (e) => {
+  currentKeysPressed[e.repeats] = true;
+  console.log("pressed");
+};
+
+let onKeyUp = (e) => {
+  currentKeysPressed[e.key] = false;
+};
+
+document.addEventListener("keydown", onKeypress);
+document.addEventListener("keyup", onKeyUp);
+
+//reference https://stackoverflow.com/questions/56484999/running-code-repeatedly-while-key-pressed-in-javascript

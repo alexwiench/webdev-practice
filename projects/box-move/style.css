@@ -5,6 +5,7 @@
 
 body {
   background-color: #52489c;
+  overflow: hidden;
 }
 
 div {
@@ -12,6 +13,7 @@ div {
   height: 100px;
   background-color: #ebebeb;
   border-radius: 100%;
+  transition: all 0.2s;
 }
 
 #ball {
