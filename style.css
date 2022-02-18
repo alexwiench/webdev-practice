@@ -12,17 +12,14 @@ body {
   background-color: #1d5852;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   min-height: 100vh;
 }
 
-main {
-  flex: 1;
-  margin: 0 auto;
-}
-
 header {
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
@@ -32,12 +29,17 @@ h1 {
   margin-bottom: 0;
 }
 
+.micro {
+  font-weight: 300;
+  font-size: 2rem;
+}
+
 h2 {
   position: relative;
+  align-self: flex-end;
   color: #e19f31;
   font-size: small;
   font-weight: 100;
-  text-align: right;
   margin: 0;
   padding-top: 0;
   top: -20px;
@@ -47,9 +49,10 @@ h2 {
   font-size: x-small;
 }
 
-.micro {
-  font-weight: 300;
-  font-size: 2rem;
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 p {
@@ -96,10 +99,12 @@ li a:active {
 /* footer */
 
 footer {
+  display: flex;
+  justify-content: flex-end;
   background-color: #16423e;
   color: #e19f31;
-  text-align: right;
   padding: 5px 20px;
+  width: 100%;
 }
 
 footer a {
