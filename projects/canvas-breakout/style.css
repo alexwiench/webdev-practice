@@ -1,0 +1,28 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+canvas {
+	background: #eee;
+	display: block;
+	margin: 0 auto;
+}
+
+body {
+	/* text-align: center; */
+	font-family: 'Courier New', Courier, monospace;
+	background-color: #1d5852;
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	justify-content: center;
+	align-content: center;
+}
+
+h2 {
+	margin: auto;
+}
+
+h2 a {
+	font-weight: 400;
+	color: #e19f31;
+}
